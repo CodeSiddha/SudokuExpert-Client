@@ -1,13 +1,13 @@
 export const REST = {
   getBoard: function () {
-    return fetch(`https://sudoku-solver-server.herokuapp.com/puzzle`);
+    return fetch(`https://sudoku-expert.herokuapp.com/puzzle`);
   },
   solveBoard: function (grid) {
     const data = {
       board: grid,
     };
 
-    return fetch(`https://sudoku-solver-server.herokuapp.com/solve`, {
+    return fetch(`https://sudoku-expert.herokuapp.com/solve`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -19,7 +19,7 @@ export const REST = {
     const data = {
       board: grid,
     };
-    return fetch(`https://sudoku-solver-server.herokuapp.com/validate`, {
+    return fetch(`https://sudoku-expert.herokuapp.com/validate`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
